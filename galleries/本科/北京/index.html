@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang=zh-CN data-theme="light">
+	
+<script src="/js/plugins/toggleTheme.js"></script>
+
+	<script>
+		setTheme();
+	</script>
+	<head>
+		
+<title>北京 | Hexo-Theme-Quiter</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/images/icon/favicon.ico">
+<link href="/css/plugins/print.css" media="print" rel="stylesheet" />
+
+<link rel="stylesheet" href="/css/index.css">
+
+
+    <meta name="keywords" content="Hexo theme, blog">
+    <meta name="description" content="🍓 A simple and fully functional Hexo theme, improved based on Hexo theme quiet.">
+
+
+
+<script src="/js/plugins/jquery.min.js"></script>
+
+
+<script src="/js/plugins/hljs.min.js"></script>
+
+
+<script src="/js/plugins/init.js"></script>
+
+
+<script src="/js/plugins/hide.js"></script>
+
+
+<script src="/js/plugins/tabs.js"></script>
+
+
+
+    
+
+
+
+
+
+
+
+    
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<header class="sticky-header">
+	<nav>
+		<div class="nav-left">
+			<a href="/" class="logo">
+				<img no-lazy src="/images/headers_icon/logo.webp" alt="Quieter">
+			</a>
+			<ul class="breadcrumb" id="breadcrumb"></ul>
+		</div>
+		<div class="nav-right">
+			<ul>
+				
+					<li>
+						<a href="/">
+						  主页
+						</a>
+					</li>
+				
+					<li>
+						<a href="/categories">
+						  类别
+						</a>
+					</li>
+				
+					<li>
+						<a href="/tags">
+						  标签
+						</a>
+					</li>
+				
+					<li>
+						<a href="/archives">
+						  归档
+						</a>
+					</li>
+				
+					<li>
+						<a href="/galleries">
+						  相册
+						</a>
+					</li>
+				
+					<li>
+						<a href="/links">
+						  链接
+						</a>
+					</li>
+				
+					<li>
+						<a href="/about">
+						  关于
+						</a>
+					</li>
+								  
+			</ul>
+		</div>
+		<div class="nav-right-close">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+				<path fill="none" d="M0 0h24v24H0z" />
+				<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
+			</svg>
+		</div>
+
+		<div class="sidebar">
+    <div class="topo">
+        <p>Hexo-Theme-Quiter</p>
+    </div>
+    <ul>
+        
+        <li>
+            <a href="/">
+                主页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories">
+                类别
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags">
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives">
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/galleries">
+                相册
+            </a>
+        </li>
+        
+        <li>
+            <a href="/links">
+                链接
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about">
+                关于
+            </a>
+        </li>
+        
+    </ul>
+    <div class="sidebar-footer">
+        
+        <a href="">
+            <img no-lazy src="/images/bottom_icon/Weibo.webp" alt="Quieter">
+        </a>
+        
+        <a href="">
+            <img no-lazy src="/images/bottom_icon/Tieba.webp" alt="Quieter">
+        </a>
+        
+        <a href="">
+            <img no-lazy src="/images/bottom_icon/Bilibili.webp" alt="Quieter">
+        </a>
+        
+        <a href="">
+            <img no-lazy src="/images/bottom_icon/github.webp" alt="Quieter">
+        </a>
+        
+    </div>
+</div>
+<div class='shelter'>
+    <script>
+        $(function() {
+            $('.nav-right-close > svg').click(function() {
+                $('.sidebar').animate({
+                    right: "0"
+                }, 500);
+                $('.shelter').fadeIn("slow");
+            
+                var element = $('.topo');
+                element.addClass('custom-style');
+            
+                var links = null;
+                if ("") {
+                    links = "".split(',');
+                } else {
+                    links = "https://gz-metal-cell.github.io/images/random_covers/22.webp,https://gz-metal-cell.github.io/images/random_covers/24.webp".split(',');
+                }
+            
+                var randomLink = links[Math.floor(Math.random() * links.length)];
+                element.css('background-image', "url('" + randomLink + "')");
+            });
+          
+            $('.shelter').click(function(e) {
+                $('.sidebar').animate({
+                    right: "-100%"
+                }, 500);
+                $('.shelter').fadeOut("slow");
+            });
+        });      
+    </script>
+</div>
+	</nav>
+
+	
+		<div class="header-background"></div>
+	
+
+	<script>
+		const name = 'galleries';
+		const ul = document.querySelectorAll('.nav-right ul')[0];
+		const lis = ul.querySelectorAll('li');
+
+		if (name == 'home') {
+			lis[0].classList.add('select');
+		} else {
+			for (let i = 0; i < lis.length; i++) {
+				const li = lis[i];
+				const a = li.querySelector('a');
+				if (name === a.href.split('/')[3]) {
+					li.classList.add('select');
+				}
+			}
+		}
+	</script>
+	
+	<script>
+		var element = document.querySelector('.header-background');
+		if(element) {
+			element.classList.add('custom-style');
+			var links = null;
+			if("")
+			{
+				links = "".split(',');
+			} else
+			{
+				links = "https://gz-metal-cell.github.io/images/random_covers/22.webp,https://gz-metal-cell.github.io/images/random_covers/24.webp".split(',');
+			}
+			var randomLink = links[Math.floor(Math.random() * links.length)];
+			element.style.backgroundImage = "url('" + randomLink + "')";
+		}
+	</script>
+
+	
+<script src="/js/plugins/breadcrumb.js"></script>
+
+	<script>
+		var menus_title = [];
+		
+			menus_title.push({home: '主页'});
+		
+			menus_title.push({categories: '类别'});
+		
+			menus_title.push({tags: '标签'});
+		
+			menus_title.push({archives: '归档'});
+		
+			menus_title.push({galleries: '相册'});
+		
+			menus_title.push({links: '链接'});
+		
+			menus_title.push({about: '关于'});
+		
+		
+			customBreadcrumb(document.getElementById('breadcrumb'), menus_title);
+		
+	</script>
+</header>
+
+<div class="main-wrapper">
+    <main class="gallery">
+        <header class="main-header">
+	
+		
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+					<div class="header-background-content">
+						<span>
+							<img no-lazy src="/images/headers_icon/galleries.svg" alt="Quieter">
+						</span>
+						<h1>北京欢迎你~有梦想谁都了不起~</h1>
+					</div>
+				
+			
+				
+			
+				
+			
+		
+	
+</header>
+        <div class="article-container gallery-content">
+            <article>
+                <div class="grid"><div class="grid-sizer"></div><div class="grid-item"><img src="001.jpg" alt="枯藤老树" /></div><div class="grid-item"><img src="002.jpg" alt="人民大会堂" /></div><div class="grid-item"><img src="003.jpg" alt="天安门" /></div><div class="grid-item"><img src="004.jpg" alt="天安门" /></div><div class="grid-item"><img src="005.jpg" alt="人民大会堂" /></div><div class="grid-item"><img src="006.jpg" alt="毛主席" /></div><div class="grid-item"><img src="007.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="008.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="009.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="010.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="011.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="012.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="013.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="014.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="015.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="016.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="017.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="018.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="019.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="020.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="021.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="022.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="023.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="024.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="025.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="026.jpg" alt="故宫博物院" /></div><div class="grid-item"><img src="027.jpg" alt="王府井" /></div><div class="grid-item"><img src="028.jpg" alt="王府井" /></div><div class="grid-item"><img src="029.jpg" alt="王府井" /></div><div class="grid-item"><img src="030.jpg" alt="王府井" /></div><div class="grid-item"><img src="031.jpg" alt="王府井" /></div><div class="grid-item"><img src="032.jpg" alt="王府井" /></div><div class="grid-item"><img src="033.jpg" alt="王府井" /></div><div class="grid-item"><img src="034.jpg" alt="南池子" /></div><div class="grid-item"><img src="035.jpg" alt="人民英雄纪念碑" /></div><div class="grid-item"><img src="036.jpg" alt="人民大会堂" /></div><div class="grid-item"><img src="037.jpg" alt="天安门广场" /></div><div class="grid-item"><img src="038.jpg" alt="圆明园" /></div><div class="grid-item"><img src="039.jpg" alt="圆明园" /></div><div class="grid-item"><img src="040.jpg" alt="圆明园" /></div><div class="grid-item"><img src="041.jpg" alt="圆明园" /></div><div class="grid-item"><img src="042.jpg" alt="圆明园" /></div><div class="grid-item"><img src="043.jpg" alt="圆明园" /></div><div class="grid-item"><img src="044.jpg" alt="圆明园" /></div><div class="grid-item"><img src="045.jpg" alt="圆明园" /></div><div class="grid-item"><img src="046.jpg" alt="圆明园" /></div><div class="grid-item"><img src="047.jpg" alt="圆明园" /></div><div class="grid-item"><img src="048.jpg" alt="圆明园" /></div><div class="grid-item"><img src="049.jpg" alt="清华大学" /></div><div class="grid-item"><img src="050.jpg" alt="颐和园" /></div><div class="grid-item"><img src="051.jpg" alt="颐和园" /></div><div class="grid-item"><img src="052.jpg" alt="颐和园" /></div><div class="grid-item"><img src="053.jpg" alt="颐和园" /></div><div class="grid-item"><img src="054.jpg" alt="颐和园" /></div><div class="grid-item"><img src="055.jpg" alt="颐和园" /></div><div class="grid-item"><img src="056.jpg" alt="颐和园" /></div><div class="grid-item"><img src="057.jpg" alt="颐和园" /></div><div class="grid-item"><img src="058.jpg" alt="颐和园" /></div><div class="grid-item"><img src="059.jpg" alt="颐和园" /></div><div class="grid-item"><img src="060.jpg" alt="颐和园" /></div><div class="grid-item"><img src="061.jpg" alt="颐和园" /></div><div class="grid-item"><img src="062.jpg" alt="颐和园" /></div><div class="grid-item"><img src="063.jpg" alt="鸟巢" /></div><div class="grid-item"><img src="064.jpg" alt="水立方" /></div><div class="grid-item"><img src="065.jpg" alt="德胜门" /></div><div class="grid-item"><img src="066.jpg" alt="长城" /></div><div class="grid-item"><img src="067.jpg" alt="长城" /></div><div class="grid-item"><img src="068.jpg" alt="长城" /></div><div class="grid-item"><img src="069.jpg" alt="天坛" /></div><div class="grid-item"><img src="070.jpg" alt="天坛" /></div><div class="grid-item"><img src="071.jpg" alt="天坛" /></div><div class="grid-item"><img src="072.jpg" alt="琉璃厂" /></div><div class="grid-item"><img src="073.jpg" alt="琉璃厂" /></div><div class="grid-item"><img src="074.jpg" alt="景山" /></div><div class="grid-item"><img src="075.jpg" alt="景山" /></div><div class="grid-item"><img src="076.jpg" alt="景山" /></div><div class="grid-item"><img src="077.jpg" alt="景山" /></div><div class="grid-item"><img src="078.jpg" alt="景山" /></div><div class="grid-item"><img src="079.jpg" alt="景山" /></div><div class="grid-item"><img src="080.jpg" alt="北海公园" /></div><div class="grid-item"><img src="081.jpg" alt="北海公园" /></div><div class="grid-item"><img src="082.jpg" alt="北海公园" /></div><div class="grid-item"><img src="083.jpg" alt="恭王府" /></div><div class="grid-item"><img src="084.jpg" alt="恭王府" /></div><div class="grid-item"><img src="085.jpg" alt="恭王府" /></div><div class="grid-item"><img src="086.jpg" alt="天主教堂" /></div><div class="grid-item"><img src="087.jpg" alt="王府井" /></div><div class="grid-item"><img src="088.jpg" alt="国美" /></div><div class="grid-item"><img src="089.jpg" alt="国美" /></div><div class="grid-item"><img src="090.jpg" alt="南锣鼓巷" /></div><div class="grid-item"><img src="091.jpg" alt="南锣鼓巷" /></div><div class="grid-item"><img src="092.jpg" alt="什刹海" /></div><div class="grid-item"><img src="093.jpg" alt="什刹海" /></div><div class="grid-item"><img src="094.jpg" alt="什刹海" /></div><div class="grid-item"><img src="095.jpg" alt="什刹海" /></div><div class="grid-item"><img src="096.jpg" alt="什刹海" /></div><div class="grid-item"><img src="097.jpg" alt="什刹海" /></div><div class="grid-item"><img src="098.jpg" alt="什刹海" /></div><div class="grid-item"><img src="099.jpg" alt="中国尊" /></div><div class="grid-item"><img src="100.jpg" alt="大裤衩" /></div></div>
+                <div class="description-container"><span></span></div>
+                
+                    
+<link rel="stylesheet" href="/css/plugins/fancybox.css">
+
+                    
+<script src="/js/plugins/fancybox.umd.js"></script>
+
+                    
+<script src="/js/plugins/fancybox.js"></script>
+
+                
+                
+<script src="/js/plugins/masonry.pkgd.js"></script>
+
+                
+<script src="/js/plugins/imagesloaded.pkgd.js"></script>
+
+                <script>var lazyLoad = false;</script>
+                
+<script src="/js/widgets/gallery.js"></script>
+
+            </article>
+            
+	<aside class="rightside">
+	
+		<div class="rightside-button not-toc-button" id="js-aside">
+			<span>
+				<img no-lazy src="/images/icon/aside.png" class="rightside-button-icon" alt="Icon">
+			</span>
+		</div>
+		<script>
+			$("#js-aside").click(function () {
+				onShowAsideButton();
+			});
+		</script>
+	
+	<div class="rightside-button" id="js-toggle_theme">
+		<span>
+			<img no-lazy src="/images/icon/toggle_theme.png" class="rightside-button-icon" alt="Icon">
+		</span>
+	</div>
+
+	
+<script src="/js/plugins/goto_position.js"></script>
+
+	
+	<div class="rightside-button" id="js-go_top">
+		<span>
+			<img no-lazy src="/images/icon/go_top.png" class="rightside-button-icon" alt="Icon">
+		</span>
+	</div>
+	<div class="rightside-button" id="js-go_bottom">
+		<span>
+			<img no-lazy src="/images/icon/go_bottom.png" class="rightside-button-icon" alt="Icon">
+		</span>
+	</div>
+
+	<script>
+		setToggleThemeButtonListener();
+	</script>
+	<script>
+		$('#js-go_top')
+		.gotoPosition( {
+			speed: 300,
+			target: 'top',
+		} );
+		$('#js-go_bottom')
+		.gotoPosition( {
+			speed: 300,
+			target: 'bottom',
+		} );
+	</script>
+</aside>
+
+
+<div class="post-bottom">
+    
+    
+    
+        
+    
+</div>
+        </div>
+    </main>
+    
+        <aside class="main-aside">
+    
+<script src="/js/widgets/aside.js"></script>
+
+    <script>
+        showAside();
+    </script>
+
+    <div class="aside-top">
+        <div class="aside-top-about aside-card">
+            <a href="/about" class="aside-top-about-portrait">
+                <img no-lazy src="https://gz-metal-cell.github.io/about/portrait.png" alt="Q">
+            </a>
+            <div class="aside-top-about-info">
+                <span class="author"> Zi-Zi</span>
+                <span class="description">不以物喜，不以己悲。</span>
+            </div>              
+            <div class="aside-top-about-site">
+                <a href="/categories" class="aside-top-about-site-item">
+                    <span class="title">类别</span>
+                    <span class="count">0</span>
+                </a>
+                <a href="/tags" class="aside-top-about-site-item">
+                    <span class="title">标签</span>
+                    <span class="count">0</span>
+                </a>
+                <a href="/archives" class="aside-top-about-site-item">
+                    <span class="title">归档</span>
+                    <span class="count">1</span>
+                </a>
+            </div>
+            <div class="aside-top-about-contact">
+                
+                    
+                        <a href="">
+                            <img no-lazy src="/images/bottom_icon/Weibo.webp" alt="Quieter">
+                        </a>
+                    
+                        <a href="">
+                            <img no-lazy src="/images/bottom_icon/Tieba.webp" alt="Quieter">
+                        </a>
+                    
+                        <a href="">
+                            <img no-lazy src="/images/bottom_icon/Bilibili.webp" alt="Quieter">
+                        </a>
+                    
+                        <a href="">
+                            <img no-lazy src="/images/bottom_icon/github.webp" alt="Quieter">
+                        </a>
+                    
+                
+            </div>
+        </div> 
+
+        
+    </div>
+
+    <div class="aside-bottom">
+        
+    </div>
+</aside>
+    
+</div>
+		<footer>
+	<div class="content">
+		
+			<span>©2024&nbsp;By&nbsp;<a href="/about">GZ-Metal-Cell</a>.</span>
+		
+		<span><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> theme by <a target="_blank" rel="noopener" href="https://github.com/GZ-Metal-Cell/hexo-theme-quieter">Quieter</a>.</span>
+		
+	</div>
+
+	
+<script src="/js/plugins/ref.js"></script>
+
+	
+<script src="/js/plugins/highlight_tools.js"></script>
+
+	<script>
+		var copyIcon = "/images/icon/copy.png";
+		var closeCodeBlockIcon = "/images/icon/close_code_block.png";
+		var highlightShrink = "";
+		var HighlightHeightLimit = "";
+	</script>
+	
+	<!-- Analytics -->
+
+
+	
+
+	
+
+    
+		
+<script src="/js/plugins/replaceSpacesWithNbsp.js"></script>
+
+	
+
+	
+	
+	
+		<script>
+			if (typeof init === 'function') {
+				init();
+			}
+		</script>
+	
+
+	
+		
+	
+
+	
+
+	<!--
+		
+<script src="/js/plugins/jquery.pjax.min.js"></script>
+
+		<script>
+			$(document).pjax('a[target!=_blank]', 'main', {
+				fragment: 'main',
+				timeout: 8000
+			});
+
+			$(document).on('pjax:complete', function() {
+			});
+		</script> 
+	-->
+	<script>
+		console.log('\n %c Hexo-Quieter 主题 %c https://github.com/GZ-Metal-Cell/hexo-theme-quieter \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
+	</script>
+</footer>
+	</body>
+
+	<!-- Hexo-Quieter 主题  https://github.com/GZ-Metal-Cell/hexo-theme-quieter -->
+</html>
+

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang=zh-CN data-theme="light">
+	
+<script src="../../../../js/plugins/toggleTheme.js"></script>
+
+	<script>
+		setTheme();
+	</script>
+	<head>
+		
+<title>Quieter 文章写作 | Hexo-Theme-Quieter</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/images/icon/favicon.ico">
+<link href="/css/plugins/print.css" media="print" rel="stylesheet" />
+
+<link rel="stylesheet" href="../../../../css/index.css">
+
+
+
+<meta name="keywords" content="Hexo,">
+<meta name="description" content="Quieter 主题的写作技巧。">
+
+
+
+<script src="../../../../js/plugins/jquery.min.js"></script>
+
+
+<script src="../../../../js/plugins/hljs.min.js"></script>
+
+
+<script src="../../../../js/plugins/init.js"></script>
+
+
+<script src="../../../../js/plugins/hide.js"></script>
+
+
+<script src="../../../../js/plugins/tabs.js"></script>
+
+
+
+    
+<script src="../../../../js/plugins/crypto-js.min.js"></script>
+
+    
+<link rel="stylesheet" href="../../../../css/plugins/AESContainer.css">
+
+    
+<script src="../../../../js/plugins/AESContainer.js"></script>
+
+
+    
+
+    
+<link rel="stylesheet" href="../../../../css/plugins/APlayer.css">
+
+    
+<script src="../../../../js/plugins/APlayer.min.js"></script>
+
+
+
+
+    <script src='https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js'></script>
+    <script>mermaid.initialize({startOnLoad:false});</script>
+    
+<link rel="stylesheet" href="../../../../css/plugins/mermaid.css">
+
+    
+<script src="../../../../js/plugins/mermaid.js"></script>
+
+
+
+
+
+
+    
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<header class="sticky-header">
+	<nav>
+		<div class="nav-left">
+			<a href="/" class="logo">
+				<img no-lazy src="/images/headers_icon/logo.webp" alt="Quieter">
+			</a>
+			<ul class="breadcrumb" id="breadcrumb"></ul>
+		</div>
+		<div class="nav-right">
+			<ul>
+				
+					<li>
+						<a href="/">
+						  主页
+						</a>
+					</li>
+				
+					<li>
+						<a href="/categories">
+						  类别
+						</a>
+					</li>
+				
+					<li>
+						<a href="/tags">
+						  标签
+						</a>
+					</li>
+				
+					<li>
+						<a href="/archives">
+						  归档
+						</a>
+					</li>
+				
+					<li>
+						<a href="/galleries">
+						  相册
+						</a>
+					</li>
+				
+					<li>
+						<a href="/links">
+						  链接
+						</a>
+					</li>
+				
+					<li>
+						<a href="/about">
+						  关于
+						</a>
+					</li>
+								  
+			</ul>
+		</div>
+		<div class="nav-right-close">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+				<path fill="none" d="M0 0h24v24H0z" />
+				<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
+			</svg>
+		</div>
+
+		<div class="sidebar">
+    <div class="topo">
+        <p>Hexo-Theme-Quieter</p>
+    </div>
+    <ul>
+        
+        <li>
+            <a href="/">
+                主页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories">
+                类别
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags">
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives">
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/galleries">
+                相册
+            </a>
+        </li>
+        
+        <li>
+            <a href="/links">
+                链接
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about">
+                关于
+            </a>
+        </li>
+        
+    </ul>
+    <div class="sidebar-footer">
+        
+        <a href="">
+            <img no-lazy src="/images/bottom_icon/Weibo.webp" alt="Quieter">
+        </a>
+        
+        <a href="">
+            <img no-lazy src="/images/bottom_icon/Tieba.webp" alt="Quieter">
+        </a>
+        
+        <a href="">
+            <img no-lazy src="/images/bottom_icon/Bilibili.webp" alt="Quieter">
+        </a>
+        
+        <a href="">
+            <img no-lazy src="/images/bottom_icon/github.webp" alt="Quieter">
+        </a>
+        
+    </div>
+</div>
+<div class='shelter'>
+    <script>
+        $(function() {
+            $('.nav-right-close > svg').click(function() {
+                $('.sidebar').animate({
+                    right: "0"
+                }, 500);
+                $('.shelter').fadeIn("slow");
+            
+                var element = $('.topo');
+                element.addClass('custom-style');
+            
+                var links = null;
+                if ("") {
+                    links = "".split(',');
+                } else {
+                    links = "/images/random_covers/01.webp,/images/random_covers/02.webp,/images/random_covers/03.webp,/images/random_covers/04.webp,/images/random_covers/05.webp,/images/random_covers/06.webp,/images/random_covers/07.webp".split(',');
+                }
+            
+                var randomLink = links[Math.floor(Math.random() * links.length)];
+                element.css('background-image', "url('" + randomLink + "')");
+            });
+          
+            $('.shelter').click(function(e) {
+                $('.sidebar').animate({
+                    right: "-100%"
+                }, 500);
+                $('.shelter').fadeOut("slow");
+            });
+        });      
+    </script>
+</div>
+	</nav>
+
+	
+		<div class="header-background"></div>
+	
+
+	<script>
+		const name = 'post';
+		const ul = document.querySelectorAll('.nav-right ul')[0];
+		const lis = ul.querySelectorAll('li');
+
+		if (name == 'home') {
+			lis[0].classList.add('select');
+		} else {
+			for (let i = 0; i < lis.length; i++) {
+				const li = lis[i];
+				const a = li.querySelector('a');
+				if (name === a.href.split('/')[3]) {
+					li.classList.add('select');
+				}
+			}
+		}
+	</script>
+	
+	<script>
+		var element = document.querySelector('.header-background');
+		if(element) {
+			element.classList.add('custom-style');
+			var links = null;
+			if("")
+			{
+				links = "".split(',');
+			} else
+			{
+				links = "/images/random_covers/01.webp,/images/random_covers/02.webp,/images/random_covers/03.webp,/images/random_covers/04.webp,/images/random_covers/05.webp,/images/random_covers/06.webp,/images/random_covers/07.webp".split(',');
+			}
+			var randomLink = links[Math.floor(Math.random() * links.length)];
+			element.style.backgroundImage = "url('" + randomLink + "')";
+		}
+	</script>
+
+	
+<script src="../../../../js/plugins/breadcrumb.js"></script>
+
+	<script>
+		var menus_title = [];
+		
+			menus_title.push({home: '主页'});
+		
+			menus_title.push({categories: '类别'});
+		
+			menus_title.push({tags: '标签'});
+		
+			menus_title.push({archives: '归档'});
+		
+			menus_title.push({galleries: '相册'});
+		
+			menus_title.push({links: '链接'});
+		
+			menus_title.push({about: '关于'});
+		
+		
+			
+				postsBreadcrumb(
+					document.getElementById('breadcrumb'),
+					"类别",
+					"/categories",
+					"文档",
+					"/categories/文档"
+				);
+			
+		
+	</script>
+</header>
+
+<div class="main-wrapper">
+    <main class="post">
+        <header class="main-header">
+	
+		
+			
+				
+<link rel="stylesheet" href="../../../../css/plugins/fancybox.css">
+
+				
+<script src="../../../../js/plugins/fancybox.umd.js"></script>
+
+				
+<script src="../../../../js/plugins/fancybox.js"></script>
+
+			
+			<div class="post-header-background-content">
+				<ul class="post-header-tag">
+					
+						
+							<li><a href="/tags/Hexo"><span>Hexo</span></a></li>
+						
+					
+				</ul>
+				
+				<h1>Quieter 文章写作</h1>
+		
+				
+					<div class="post-header-desc">
+						<svg t="1714702231661" class="icon" viewBox="0 0 1024 1024" version="1.1"
+						xmlns="http://www.w3.org/2000/svg" p-id="1154" xmlns:xlink="http://www.w3.org/1999/xlink"
+						width="20" height="20">
+						<path
+							d="M778.24 117.76A46.08 46.08 0 0 1 824.32 163.84v430.08c0 8.4992-4.13696 16.01536-10.50624 20.6848l-0.24576 0.2048L587.5712 846.09024a35.84 35.84 0 0 1-61.48096-25.06752v-220.9792a46.08 46.08 0 0 1 46.08-46.08l200.94976-0.02048V168.96h-522.24v686.08H389.12c13.25056 0 24.1664 10.07616 25.47712 22.97856l0.12288 2.62144c0 14.1312-11.4688 25.6-25.6 25.6h-143.36A46.08 46.08 0 0 1 199.68 860.16V163.84A46.08 46.08 0 0 1 245.76 117.76h532.48z m-26.78784 487.38304h-174.16192v178.176l174.16192-178.176z m-45.19936-169.94304a25.6 25.6 0 0 1 0 51.2H307.2a25.6 25.6 0 0 1 0-51.2h399.0528z m0-122.88a25.6 25.6 0 0 1 0 51.2H307.2a25.6 25.6 0 0 1 0-51.2h399.0528z"
+							fill="#ffffff" p-id="1155"></path>
+						</svg>
+						<p>Quieter 主题的写作技巧。</p>
+					</div>
+				
+		
+				<div class="post-header-info">
+					<svg t="1604839279282" class="icon" viewBox="0 0 1024 1024" version="1.1"
+					xmlns="http://www.w3.org/2000/svg" p-id="2901" width="20" height="20">
+						<path
+							d="M513 956.3c-247.7 0-448-200.3-448-448S265.3 66.2 513 66.2s448 200.3 448 448-200.3 442.1-448 442.1z m0-830.9c-212.2 0-388.8 170.7-388.8 388.8C124.2 726.3 294.9 903 513 903c212.2 0 388.8-170.7 388.8-388.8S725.2 125.4 513 125.4z m0 430.2c-94.2 0-170.7-76.5-170.7-170.7S418.8 207.8 513 207.8s170.7 76.5 170.7 170.7S607.2 555.6 513 555.6z m0-289.1c-64.6 0-112 52.8-112 112s47.4 117.9 112 117.9 112-52.8 112-112-47.4-117.9-112-117.9z m0 689.8c-135.7 0-259-58.7-341.9-158.9l-11.8-17.8 11.8-17.8c76.5-117.9 206.2-188.5 347.8-188.5 135.7 0 265 64.6 341.9 182.6l11.8 17.8-11.8 17.8C778 897.1 648.7 956.3 513 956.3zM230.3 773.2C300.9 849.7 406.9 897 513 897c112 0 218.1-47.4 288.6-129.8-70.5-88.2-170.7-135.6-282.7-135.6s-218.1 53.3-288.6 141.6z"
+							p-id="2902" fill="#ffffff"></path>
+					</svg>
+					<div class="post-header-info-author">
+						<a href="/about">GZ-Metal-Cell</a>
+					</div>
+					
+						<div class="post-header-info-categories">
+							
+								<a href="/categories/文档">文档</a>
+							
+						</div>
+					
+					<time>2024/11/13 19:01:00</time>
+				</div>
+		
+				
+					<div class="post-header-stat">
+						<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" width="20" height="20">
+							<path fill="#FFFFFF" d="M187.2,165.6c0,2.6-2.1,4.7-4.7,4.7H17.5c-2.6,0-4.7-2.1-4.7-4.7s2.1-4.7,4.7-4.7h165.1
+								C185.2,160.9,187.2,163,187.2,165.6z"/>
+							<path fill="#FFFFFF" d="M17.5,29.7c2.6,0,4.7,2.1,4.7,4.7v131.2c0,2.6-2.1,4.7-4.7,4.7s-4.7-2.1-4.7-4.7V34.4
+								C12.8,31.8,14.9,29.7,17.5,29.7z M77.9,91.5c1.8,1.8,1.8,4.8,0,6.6l-39.8,39.8c-1.9,1.8-4.9,1.7-6.6-0.2c-1.7-1.8-1.7-4.6,0-6.4
+								l39.8-39.8C73.1,89.6,76,89.6,77.9,91.5z M169.9,70.2c1.6,2.1,1.1,5-0.9,6.5c0,0,0,0,0,0l-64.2,48.2c-2.1,1.5-5,1.1-6.6-0.9
+								c-1.6-2.1-1.1-5,0.9-6.5c0,0,0,0,0,0l64.2-48.2C165.4,67.7,168.3,68.1,169.9,70.2L169.9,70.2z"/>
+							<path fill="#FFFFFF" d="M104.6,124.5c-1.8,1.8-4.8,1.8-6.6,0L71.6,98.1c-1.8-1.8-1.8-4.8,0-6.6c1.8-1.8,4.8-1.8,6.6,0l26.3,26.3
+								C106.4,119.6,106.4,122.6,104.6,124.5C104.6,124.4,104.6,124.4,104.6,124.5z"/>
+						</svg>
+		
+						
+							
+<script src="../../../../js/plugins/wordCount.js"></script>
+
+							<p class="post-count">文字数：---</p>
+						
+		
+						
+					</div>
+				
+			</div>
+		
+	
+</header>
+        <div class="post-content article-container">
+            <article class="post-content-info">
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>​    在这篇文章中，将为您展示 <a target="_blank" rel="noopener" href="https://github.com/GZ-Metal-Cell/hexo-theme-quieter">Quieter</a> 主题支持的写作样式。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h2 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h2><p>​    主题推荐使用 <a target="_blank" rel="noopener" href="https://github.com/sun11/hexo-renderer-kramed">hexo-renderer-kramed</a> 作为渲染引擎。</p>
+<hr>
+<p><code>我是行内代码</code></p>
+<p><strong>我是粗体。</strong></p>
+<p><em>我是斜体。</em></p>
+<p><del>删除这段文字</del></p>
+<hr>
+<p>​    在渲染文章时，Quieter 会自动将文章片段中的换号符转为四个 <code>&amp;nbsp;</code>，如果不需要这个功能，可以在 <strong>Quieter</strong> 下的 <code>_config.yaml</code> 中关闭：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 自动将多个空格替换成对应的 &amp;nbsp;</span><br><span class="hljs-attr">replaceSpacesWithNbsp:</span> <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>​    主题使用 <code>highlight.js</code> 进行代码高亮：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    std::cout &lt;&lt; <span class="hljs-string">&quot;Hello, World!&quot;</span> &lt;&lt; std::endl; <br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello, World!&quot;</span>)<br></code></pre></td></tr></table></figure>
+<p>​    可以在文章开头设定代码块的显示形式：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 代码块自动关闭</span><br><span class="hljs-attr">highlight_shrink:</span> <span class="hljs-literal">true</span><br><span class="hljs-comment"># 代码块最大显示长度</span><br><span class="hljs-attr">highlight_height_limit:</span> <span class="hljs-string">480px</span><br></code></pre></td></tr></table></figure>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>颜色</th>
+<th>价格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>香蕉</td>
+<td>黄</td>
+<td>￥2</td>
+</tr>
+<tr>
+<td>苹果</td>
+<td>红</td>
+<td>￥3</td>
+</tr>
+<tr>
+<td>青提</td>
+<td>绿</td>
+<td>￥6</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><ol>
+<li>香蕉</li>
+<li>苹果</li>
+<li>青提</li>
+</ol>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><ul>
+<li>香蕉</li>
+<li>苹果</li>
+<li>青提</li>
+</ul>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="/images/random_covers/07.webp" alt="picture"></p>
+<p>​    为了保证图片不占用较大的页面空间，主题默认规定图片大小：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><code class="hljs css"><span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;<br><span class="hljs-attribute">max-height</span>: <span class="hljs-number">60vh</span>;<br></code></pre></td></tr></table></figure>
+<p>​    主题默认开启 fancybox，这可以在 <strong>Quieter</strong> 下的 <code>_config.yaml</code> 中配置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># fancybox</span><br><span class="hljs-attr">fancybox:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">css:</span> <span class="hljs-string">css/plugins/fancybox.css</span><br>    <span class="hljs-attr">js:</span> <span class="hljs-string">js/plugins/fancybox.umd.js</span><br></code></pre></td></tr></table></figure>
+<p>​    可以在文章开头设置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">math:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<p>​    关闭该页面的 fancybox。</p>
+<p>​    也可以使用诸如下面的图片插入语句使得某张图片不参与 fancybox：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">no-fancybox</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;xxx&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;xxx&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">img</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p>​    可以在文章开头进行如下设定使得文章图片下方附有对应的描述：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">photoFigcaption:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>​    主题支持 Mathjax 或 Katex，需要在 <strong>Quieter</strong> 下的 <code>_config.yaml</code> 中配置（这里选择 Katex）：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">katex:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">css:</span> <span class="hljs-string">/js/plugins/katex/katex.min.css</span> <span class="hljs-comment"># https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css</span><br>    <span class="hljs-attr">js:</span> <span class="hljs-string">/js/plugins/katex/katex.min.js</span> <span class="hljs-comment"># https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js</span><br>    <span class="hljs-attr">auto_render:</span> <span class="hljs-string">/js/plugins/katex/auto-render.min.js</span> <span class="hljs-comment"># https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js</span><br>    <span class="hljs-attr">copy_tex:</span><br>        <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-attr">css:</span> <span class="hljs-string">/css/plugins/copy-tex.css</span> <span class="hljs-comment"># https://cdn.bootcdn.net/ajax/libs/KaTeX/0.12.0/contrib/copy-tex.css</span><br>        <span class="hljs-attr">js:</span> <span class="hljs-string">/js/plugins/copy-tex.js</span> <span class="hljs-comment"># https://cdn.bootcdn.net/ajax/libs/KaTeX/0.12.0/contrib/copy-tex.js</span><br></code></pre></td></tr></table></figure>
+<p>​    之后，需要在文章开头设置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">math:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<p>​    下面是一个显示数学公式的示例：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">$$\int<span class="hljs-emphasis">_&#123;0&#125;^&#123;\infty&#125; \frac&#123;e^&#123;-x^2&#125;&#125;&#123;\sqrt&#123;x&#125;&#125; , dx = \sqrt&#123;\pi&#125;$$</span><br></code></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">\int_{0}^{\infty} \frac{e^{-x^2}}{\sqrt{x}} , dx = \sqrt{\pi}</script><p>​    或</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">得到这样的 $\sum<span class="hljs-emphasis">_&#123;n=1&#125;^&#123;\infty&#125; \frac&#123;1&#125;&#123;n^2&#125; = \frac&#123;\pi^2&#125;&#123;6&#125;$ 行内数学公式。</span><br></code></pre></td></tr></table></figure>
+<p>得到这样的 $\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}$ 行内数学公式。</p>
+<h2 id="Mermaid"><a href="#Mermaid" class="headerlink" title="Mermaid"></a>Mermaid</h2><p>​    Quieter 适配并优化 <a target="_blank" rel="noopener" href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams">hexo-filter-mermaid-diagrams</a> 插件，在需要使用 Mermaid 的文章开头设置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">mermaid:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<p>​    在<strong>主题</strong>下的 <code>_config.yaml</code> 中配置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># mermaid chart</span><br><span class="hljs-comment"># 可以配合（hexo-filter-mermaid-diagrams）</span><br><span class="hljs-attr">mermaid:</span> <span class="hljs-comment">## mermaid url https://github.com/knsv/mermaid</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>  <span class="hljs-comment"># default true</span><br>  <span class="hljs-attr">js:</span> <span class="hljs-string">https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js</span><br>  <span class="hljs-attr">options:</span> <span class="hljs-comment"># find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js</span><br>    <span class="hljs-comment">#startOnload: true  // default true</span><br></code></pre></td></tr></table></figure>
+<p>​    效果：</p>
+<pre class="mermaid">graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;</pre>
+
+<h2 id="APlayer"><a href="#APlayer" class="headerlink" title="APlayer"></a>APlayer</h2><p>​    Quieter 适配并优化 <a target="_blank" rel="noopener" href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md">hexo-tag-aplayer</a> 插件，安装后请在<strong>项目根目录</strong>下的 <code>_config.yml</code> 将 aplayer 的预加载关闭：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 关闭 aplayer 预加载</span><br><span class="hljs-attr">aplayer:</span><br>    <span class="hljs-attr">asset_inject:</span> <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
+<p>​    之后在需要使用 aplayer 的文章开头设置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">APlayer:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<p>​    下面是一个在文章中插入音乐的示例：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% aplayer &quot;No Happy Endings&quot; &quot;Tangerine Dream&quot; &quot;/musics/No Happy Endings.mp3&quot; &quot;/musics/No Happy Endings.webp&quot; &quot;&quot; %&#125;<br></code></pre></td></tr></table></figure>
+<p>​    效果：</p>
+
+        <div id="aplayer-WRSSLCVC" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-WRSSLCVC"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "No Happy Endings",
+              author: "Tangerine Dream",
+              url: "/musics/No Happy Endings.mp3",
+              pic: "/musics/No Happy Endings.webp",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+<h2 id="特殊-Tag"><a href="#特殊-Tag" class="headerlink" title="特殊 Tag"></a>特殊 Tag</h2><p>​    Quieter 支持一些 Markdown 以外的 Tag 语法，便于方便地加载一些特别的组件：</p>
+<h3 id="AES-文章片段加密"><a href="#AES-文章片段加密" class="headerlink" title="AES 文章片段加密"></a>AES 文章片段加密</h3><p>​    Quieter 支持给文章的某个片段进行 AES 算法加密，需要安装 <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/crypto-js">crypto-js</a> 插件，该功能与 <a target="_blank" rel="noopener" href="https://github.com/D0n9X1n/hexo-blog-encrypt">hexo-blog-encrypt</a>（全文加密）不冲突。</p>
+<p>​    在需要进行文章片段加密的文章开头设置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">AES:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<p>​    语法：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% AES passowrd, label %&#125;<br>content<br>&#123;% endAES %&#125;<br></code></pre></td></tr></table></figure>
+<p>​    一个示例如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% AES 123456, &quot;密码是 123456&quot; %&#125;<br>这是加密的内容！<br>&#123;% endAES %&#125;<br></code></pre></td></tr></table></figure>
+<p>​    效果：</p>
+<script>new AESContainer(' 密码是 123456', 'U2FsdGVkX1+7DMFxNeLQm9VKdmF3VPaQcLxQmzgDZxjsZ+vgTNpSXZFzjd2NepZo4m4/yl40z7qR7ZeCzlt9yznKtXi4hlOtXP0O0njF0KM=').render();</script>
+<h3 id="hide"><a href="#hide" class="headerlink" title="hide"></a>hide</h3><p>​    搬运自 <a target="_blank" rel="noopener" href="https://butterfly.js.org/">Butterfly</a>。</p>
+<h4 id="hideInline"><a href="#hideInline" class="headerlink" title="hideInline"></a>hideInline</h4><p>​    语法：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% hideInline content,display,bg,color %&#125;<br></code></pre></td></tr></table></figure>
+<p>​    <code>content</code> 不能包含當引號，可用 <code>&amp;apos;</code> 代替</p>
+<p>​    示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs mark">苹果是&#123;% hideInline &quot;红色&quot;, display, #3c79b6, #fff %&#125;的。<br></code></pre></td></tr></table></figure>
+<p>​    效果：</p>
+<p>苹果是<span class="hide-inline"><button type="button" class="hide-button" style="background-color:  #3c79b6;color:  #fff"> display
+  </button><span class="hide-content">红色</span></span>的。</p>
+<h4 id="hideBlock"><a href="#hideBlock" class="headerlink" title="hideBlock"></a>hideBlock</h4><p>​    语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">&#123;% hideBlock display,bg,color %&#125;<br>content<br>&#123;% endhideBlock %&#125;<br></code></pre></td></tr></table></figure>
+<p>​    示例：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% hideBlock display, #3c79b6, #fff %&#125;<br>这是按下按钮后显示的内容。<br>&#123;% endhideBlock %&#125;<br></code></pre></td></tr></table></figure>
+<p>​    效果：</p>
+<div class="hide-block"><button type="button" class="hide-button" style="background-color:  #3c79b6;color:  #fff">display
+    </button><div class="hide-content"><p>这是按下按钮后显示的内容。</p>
+</div></div>
+<h4 id="hideToggle"><a href="#hideToggle" class="headerlink" title="hideToggle"></a>hideToggle</h4><p>​    语法：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% hideToggle display,bg,color %&#125;<br>content<br>&#123;% endhideToggle %&#125;<br></code></pre></td></tr></table></figure>
+<p>​    示例：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% hideToggle &quot;点击展开&quot; %&#125;<br>这是隐藏的内容。<br>&#123;% endhideToggle %&#125;<br></code></pre></td></tr></table></figure>
+<p>​        效果：</p>
+<details class="toggle" ><summary class="toggle-button" style="">点击展开</summary><div class="toggle-content"><p>这是隐藏的内容。</p>
+</div></details>
+<h4 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h4><p>​    搬运自 <a target="_blank" rel="noopener" href="https://butterfly.js.org/">Butterfly</a>（这个主题又搬运自 <a target="_blank" rel="noopener" href="https://theme-next.js.org/">NexT</a>）。</p>
+<p>​    语法：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% tabs id %&#125;<br><br>&lt;!-- tab 标签一 --&gt;<br><br>content<br><br>&lt;!-- endtab --&gt;<br><br>&lt;!-- tab 标签二 --&gt;<br><br>content<br><br>&lt;!-- endtab --&gt;<br><br>&#123;% endtabs %&#125;<br></code></pre></td></tr></table></figure>
+<p>​    示例：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% tabs tab1 %&#125;<br><br>&lt;!-- tab 标签一 --&gt;<br><br><span class="hljs-code">    这是标签一里的内容。</span><br><span class="hljs-code"></span><br>&lt;!-- endtab --&gt;<br><br>&lt;!-- tab 标签二 --&gt;<br><br><span class="hljs-code">    这是标签二里的内容。</span><br><span class="hljs-code"></span><br>&lt;!-- endtab --&gt;<br><br>&#123;% endtabs %&#125;<br></code></pre></td></tr></table></figure>
+<p>​    效果：</p>
+<div class="tabs" id="tab1"><div class="nav-tabs"><button type="button" class="tab active" data-href="tab1-1">标签一</button><button type="button" class="tab" data-href="tab1-2">标签二</button></div><div class="tab-contents"><div class="tab-item-content active" id="tab1-1"><p>​    这是标签一里的内容。</p></div><div class="tab-item-content" id="tab1-2"><p>​    这是标签二里的内容。</p></div></div></div>
+<h3 id="flink"><a href="#flink" class="headerlink" title="flink"></a>flink</h3><p>​    在文章中显示友情链接：</p>
+<p>​    示例：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% flink %&#125;<br><span class="hljs-bullet">-</span> class<span class="hljs-emphasis">_name: &#x27;写作&#x27;</span><br><span class="hljs-emphasis">  class_</span>desc: &#x27;一些有助于写博客的网站&#x27;<br>  link<span class="hljs-emphasis">_list:</span><br><span class="hljs-emphasis">    - name: &#x27;emojiall&#x27;</span><br><span class="hljs-emphasis">      link: &#x27;https://www.emojiall.com/zh-hans&#x27;</span><br><span class="hljs-emphasis">      avatar: &#x27;https://gz-metal-cell.github.io/links/emojiall.webp&#x27;</span><br><span class="hljs-emphasis">      descr: &#x27;😍😉🤑🤭🤔😬😭&#x27;</span><br><span class="hljs-emphasis">    - name: &#x27;Tinypng&#x27;</span><br><span class="hljs-emphasis">      link: &#x27;https://tinify.cn/&#x27;</span><br><span class="hljs-emphasis">      avatar: &#x27;https://gz-metal-cell.github.io/links/tinify.webp&#x27;</span><br><span class="hljs-emphasis">      descr: &#x27;压缩图片&#x27;</span><br><span class="hljs-emphasis">- class_</span>name: &#x27;网站测速&#x27;<br>  class<span class="hljs-emphasis">_desc: &#x27;测试网站性能如何？&#x27;</span><br><span class="hljs-emphasis">  link_</span>list:<br><span class="hljs-bullet">  -</span> name: &#x27;PageSpeed Insights&#x27;<br><span class="hljs-code">    link: &#x27;https://pagespeed.web.dev/&#x27;</span><br><span class="hljs-code">    avatar: &#x27;https://gz-metal-cell.github.io/links/pagespeed.webp&#x27;</span><br><span class="hljs-code">    descr: &#x27;测速并提供优化建议&#x27;</span><br><span class="hljs-code">  - name: &#x27;Catchpoint&#x27;</span><br><span class="hljs-code">    link: &#x27;https://www.webpagetest.org/&#x27;</span><br><span class="hljs-code">    avatar: &#x27;https://gz-metal-cell.github.io/links/webpagetest.webp&#x27;</span><br><span class="hljs-code">    descr: &#x27;测速并提供优化建议&#x27;</span><br><span class="hljs-code">&#123;% endflink %&#125;</span><br></code></pre></td></tr></table></figure>
+<h3 id="瀑布流相册"><a href="#瀑布流相册" class="headerlink" title="瀑布流相册"></a>瀑布流相册</h3><p>​    在需要进行使用瀑布流相册的文章开头设置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">gallery:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<p>​    语法：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% gallery %&#125;<br><span class="hljs-bullet"> -</span> &#123;title: &quot;图片 1&quot;, src: 图片链接&#125;<br><span class="hljs-bullet"> -</span> &#123;title: &quot;图片 2&quot;, src: 图片链接&#125;<br><span class="hljs-bullet"> -</span> &#123;title: &quot;图片 3&quot;, src: 图片链接&#125;<br> ...<br>&#123;% endgallery %&#125;<br></code></pre></td></tr></table></figure>
+<p>​    效果：</p>
+<div class="grid"><div class="grid-sizer"></div><div class="grid-item"><img no-figcaption src="https://gz-metal-cell.github.io/2022/08/22/Diary-Garyton%E7%9A%846-8%E6%9C%88/0816_4.jpg" alt="图片 1" /></div><div class="grid-item"><img no-figcaption src="https://gz-metal-cell.github.io/2022/08/22/Diary-Garyton%E7%9A%846-8%E6%9C%88/0811_5.jpg" alt="图片 2" /></div><div class="grid-item"><img no-figcaption src="https://gz-metal-cell.github.io/2022/08/22/Diary-Garyton%E7%9A%846-8%E6%9C%88/0809_1.jpg" alt="图片 3" /></div></div>
+<h3 id="div"><a href="#div" class="headerlink" title="div"></a>div</h3><p>​    语法：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% div class, id %&#125;<br>content<br>&#123;% enddiv %&#125;<br></code></pre></td></tr></table></figure>
+<p>​    这将会给 <code>conent</code> 外包一层 <code>&lt;div class=&quot;class&quot; id=&quot;id&quot;&gt;&lt;/div&gt;</code>，这在引入外部 css/js 文件时很有用。</p>
+<p>​    示例：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% div subfields %&#125;<br><br>&#123;% div subfield %&#125;<br><br>subfield 1.<br><br>&#123;% enddiv %&#125;<br><br>&#123;% div subfield %&#125;<br><br>subfield 2.<br><br>&#123;% enddiv %&#125;<br><br>&#123;% enddiv %&#125;<br></code></pre></td></tr></table></figure>
+<p>​    并引入对应的 css：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.subfields</span> &#123;<br>    <span class="hljs-attribute">display</span>: flex;<br>    <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-built_in">var</span>(--border);<br>    <span class="hljs-attribute">transition</span>: border <span class="hljs-number">0.5s</span> ease-in-out;<br>    <span class="hljs-attribute">margin</span>: <span class="hljs-number">5px</span> auto;<br>&#125;<br><br><span class="hljs-selector-class">.subfields</span> &gt; <span class="hljs-selector-class">.subfield</span> &#123;<br>    <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;<br>    <span class="hljs-attribute">transition</span>: border <span class="hljs-number">0.5s</span> ease-in-out;<br>    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">10px</span>;<br>&#125;<br><br><span class="hljs-selector-class">.subfields</span> &gt; <span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:first-child</span>)<span class="hljs-selector-class">.subfield</span> &#123;<br>    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--border);<br>&#125;<br></code></pre></td></tr></table></figure>
+<style>
+    .subfields {
+    display: flex;
+    border: 2px solid var(--border);
+    transition: border 0.5s ease-in-out;
+    margin: 5px auto;
+    }
+    .subfields > .subfield {
+        flex: 1;
+        transition: border 0.5s ease-in-out;
+        padding: 0 10px;
+        /* align-content: center; */
+    }
+    .subfields > :not(:first-child).subfield {
+        border-left: 1px solid var(--border);
+    }
+</style>
+
+<div class="subfields"><div class="subfield"><p>subfield 1.</p>
+</div>
+<div class="subfield"><p>subfield 2.</p>
+</div></div>
+<h2 id="善于使用-html-语句进行写作"><a href="#善于使用-html-语句进行写作" class="headerlink" title="善于使用 html 语句进行写作"></a>善于使用 html 语句进行写作</h2><p>​    特殊的 Tag 可以以简便的语法实现特定的效果。然而，对于其他复杂的情况，要善于使用 html 语句进行写作。</p>
+<p>​    示例：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">marquee</span> <span class="hljs-attr">behavior</span>=<span class="hljs-string">&quot;scroll&quot;</span> <span class="hljs-attr">direction</span>=<span class="hljs-string">&quot;right&quot;</span> <span class="hljs-attr">scrollamount</span>=<span class="hljs-string">&quot;15&quot;</span>&gt;</span></span><br><span class="hljs-code">    &lt;font color=&quot;red&quot; size=&quot;4px&quot;&gt;念桥边红药，年年知为谁生？&lt;/font&gt;</span><br><span class="hljs-code">&lt;/marquee&gt;</span><br></code></pre></td></tr></table></figure>
+<p>​    效果：</p>
+<marquee behavior="scroll" direction="right" scrollamount="15"><font color="red" size="4px">念桥边红药，年年知为谁生？</font></marquee>
+
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>​    示例：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">引用自百度[^1]。<br></code></pre></td></tr></table></figure>
+<p>​    效果：</p>
+<p>引用自百度<sup><a href="#fn_1" id="reffn_1">1</a></sup>。</p>
+<blockquote id="fn_1">
+<sup>1</sup>. www.baidu.com<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+
+            </article>
+            
+	<aside class="rightside">
+	
+		<div class="rightside-button" id="js-aside">
+			<span>
+				<img no-lazy src="/images/icon/aside.png" class="rightside-button-icon" alt="Icon">
+			</span>
+		</div>
+		<script>
+			$("#js-aside").click(function () {
+				onShowAsideButton();
+			});
+		</script>
+	
+	<div class="rightside-button" id="js-toggle_theme">
+		<span>
+			<img no-lazy src="/images/icon/toggle_theme.png" class="rightside-button-icon" alt="Icon">
+		</span>
+	</div>
+
+	
+<script src="../../../../js/plugins/goto_position.js"></script>
+
+	
+	<div class="rightside-button" id="js-go_top">
+		<span>
+			<img no-lazy src="/images/icon/go_top.png" class="rightside-button-icon" alt="Icon">
+		</span>
+	</div>
+	<div class="rightside-button" id="js-go_bottom">
+		<span>
+			<img no-lazy src="/images/icon/go_bottom.png" class="rightside-button-icon" alt="Icon">
+		</span>
+	</div>
+
+	<script>
+		setToggleThemeButtonListener();
+	</script>
+	<script>
+		$('#js-go_top')
+		.gotoPosition( {
+			speed: 300,
+			target: 'top',
+		} );
+		$('#js-go_bottom')
+		.gotoPosition( {
+			speed: 300,
+			target: 'bottom',
+		} );
+	</script>
+</aside>
+
+
+<div class="post-bottom">
+    
+        <div class="post-paging">     
+            <div class="post-paging-last">
+                
+            </div>
+            <div class="post-paging-next">
+                
+                    <a href="../Quieter%20%E4%B8%BB%E9%A2%98%E4%BB%8B%E7%BB%8D/">
+                        下一篇：Quieter 主题介绍
+                    </a>
+                
+            </div>
+        </div>
+    
+    
+    
+        
+    
+</div>
+        </div>
+    </main>
+    
+        <aside class="main-aside">
+    
+<script src="../../../../js/widgets/aside.js"></script>
+
+    <script>
+        showAside();
+    </script>
+
+    <div class="aside-top">
+        <div class="aside-top-about aside-card">
+            <a href="/about" class="aside-top-about-portrait">
+                <img no-lazy src="https://gz-metal-cell.github.io/about/portrait.png" alt="Q">
+            </a>
+            <div class="aside-top-about-info">
+                <span class="author"> Zi-Zi</span>
+                <span class="description">不以物喜，不以己悲。</span>
+            </div>              
+            <div class="aside-top-about-site">
+                <a href="/categories" class="aside-top-about-site-item">
+                    <span class="title">类别</span>
+                    <span class="count">2</span>
+                </a>
+                <a href="/tags" class="aside-top-about-site-item">
+                    <span class="title">标签</span>
+                    <span class="count">1</span>
+                </a>
+                <a href="/archives" class="aside-top-about-site-item">
+                    <span class="title">归档</span>
+                    <span class="count">2</span>
+                </a>
+            </div>
+            <div class="aside-top-about-contact">
+                
+                    
+                        <a href="">
+                            <img no-lazy src="/images/bottom_icon/Weibo.webp" alt="Quieter">
+                        </a>
+                    
+                        <a href="">
+                            <img no-lazy src="/images/bottom_icon/Tieba.webp" alt="Quieter">
+                        </a>
+                    
+                        <a href="">
+                            <img no-lazy src="/images/bottom_icon/Bilibili.webp" alt="Quieter">
+                        </a>
+                    
+                        <a href="">
+                            <img no-lazy src="/images/bottom_icon/github.webp" alt="Quieter">
+                        </a>
+                    
+                
+            </div>
+        </div> 
+
+        
+    </div>
+
+    <div class="aside-bottom">
+        
+            <script>
+                
+                    const tocCollapsed = true;
+                
+                
+                    const tocDepth = 6;
+                
+                var headerString = '';
+                for (let i = 1; i <= tocDepth; i++) {
+                    if (i === 1) {
+                        headerString += 'h1';
+                    } else {
+                        headerString += ', h' + i;
+                    }
+                }
+                hbeToc();
+            </script>
+            <div class="aside-bottom-toc aside-card">
+                <div class="aside-bottom-toc-title">
+                    <h1>目录</h1>
+                    <span class="toc-percentage"></span>
+                </div>
+                <ol class="aside-bottom-toc-content"></ol>
+            </div>
+        
+    </div>
+</aside>
+    
+</div>
+		<footer>
+	<div class="content">
+		
+			<span>©2024&nbsp;By&nbsp;<a href="/about">GZ-Metal-Cell</a>.</span>
+		
+		<span><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> theme by <a target="_blank" rel="noopener" href="https://github.com/GZ-Metal-Cell/hexo-theme-quieter">Quieter</a>.</span>
+		
+	</div>
+
+	
+<script src="../../../../js/plugins/ref.js"></script>
+
+	
+<script src="../../../../js/plugins/highlight_tools.js"></script>
+
+	<script>
+		var copyIcon = "/images/icon/copy.png";
+		var closeCodeBlockIcon = "/images/icon/close_code_block.png";
+		var highlightShrink = "";
+		var HighlightHeightLimit = "";
+	</script>
+	
+	<!-- Analytics -->
+
+
+	
+		
+<script src="../../../../js/plugins/photoFigcaption.js"></script>
+
+	
+
+	
+		
+			
+<script src="../../../../js/plugins/katex.js"></script>
+
+			<script>
+				const katex_css = '/js/plugins/katex/katex.min.css';
+				const katex_js = '/js/plugins/katex/katex.min.js';
+				const katex_auto_render = '/js/plugins/katex/auto-render.min.js';
+			</script>
+			<link rel="stylesheet" href="/js/plugins/katex/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+			<script defer src="/js/plugins/katex/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+			<script defer src="/js/plugins/katex/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+			
+				<link href="/css/plugins/copy-tex.css" rel="stylesheet">
+				<script src="/js/plugins/copy-tex.js"></script>
+			
+		
+	
+
+    
+		
+<script src="../../../../js/plugins/replaceSpacesWithNbsp.js"></script>
+
+	
+
+	
+		
+<script src="../../../../js/plugins/masonry.pkgd.js"></script>
+
+		
+<script src="../../../../js/plugins/imagesloaded.pkgd.js"></script>
+
+		<script>var lazyLoad = false;</script>
+		
+<script src="../../../../js/widgets/gallery.js"></script>
+
+	
+	
+	
+		<script>
+			if (typeof init === 'function') {
+				init();
+			}
+		</script>
+	
+
+	
+		
+	
+
+	
+
+	<!--
+		
+<script src="../../../../js/plugins/jquery.pjax.min.js"></script>
+
+		<script>
+			$(document).pjax('a[target!=_blank]', 'main', {
+				fragment: 'main',
+				timeout: 8000
+			});
+
+			$(document).on('pjax:complete', function() {
+			});
+		</script> 
+	-->
+	<script>
+		console.log('\n %c Hexo-Quieter 主题 %c https://github.com/GZ-Metal-Cell/hexo-theme-quieter \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
+	</script>
+</footer>
+	</body>
+
+	<!-- Hexo-Quieter 主题  https://github.com/GZ-Metal-Cell/hexo-theme-quieter -->
+</html>
+

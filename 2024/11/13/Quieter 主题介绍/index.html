@@ -200,7 +200,7 @@
                 if ("") {
                     links = "".split(',');
                 } else {
-                    links = "/images/random_covers/01.webp,/images/random_covers/02.webp,/images/random_covers/03.webp,/images/random_covers/04.webp,/images/random_covers/05.webp,/images/random_covers/06.webp,/images/random_covers/07.webp".split(',');
+                    links = "/images/random_top_img/01.webp,/images/random_top_img/02.webp,/images/random_top_img/03.webp,/images/random_top_img/04.webp,/images/random_top_img/05.webp,/images/random_top_img/06.webp,/images/random_top_img/07.webp".split(',');
                 }
             
                 var randomLink = links[Math.floor(Math.random() * links.length)];
@@ -250,7 +250,7 @@
 				links = "".split(',');
 			} else
 			{
-				links = "/images/random_covers/01.webp,/images/random_covers/02.webp,/images/random_covers/03.webp,/images/random_covers/04.webp,/images/random_covers/05.webp,/images/random_covers/06.webp,/images/random_covers/07.webp".split(',');
+				links = "/images/random_top_img/01.webp,/images/random_top_img/02.webp,/images/random_top_img/03.webp,/images/random_top_img/04.webp,/images/random_top_img/05.webp,/images/random_top_img/06.webp,/images/random_top_img/07.webp".split(',');
 			}
 			var randomLink = links[Math.floor(Math.random() * links.length)];
 			element.style.backgroundImage = "url('" + randomLink + "')";
@@ -373,6 +373,8 @@
 						
 		
 						
+							<p id="busuanzi_container_page_pv" style='display:none;'>阅读数：<span id="busuanzi_value_page_pv"></span></p>
+						
 					</div>
 				
 			</div>
@@ -381,22 +383,22 @@
 </header>
         <div class="post-content article-container">
             <article class="post-content-info">
-                <p><img src="LOGO.webp" alt="LOGO"></p>
+                <p><img src="/images/loading.webp" data-original="LOGO.webp" alt="LOGO"></p>
 <p style="text-align: center; font-size: 20px;"><b>Hexo-Theme-Quieter</b></p>
 
 <div align="center">
   <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">
-    <img no-fancybox style="display: inline;" alt="hexo" src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue.svg?style=flat-square&logo=hexo&longCache=true">
+    <img no-fancybox style="display: inline;" alt="hexo" src="/images/loading.webp" data-original="https://img.shields.io/badge/hexo-%3E=4.0.0-blue.svg?style=flat-square&logo=hexo&longCache=true">
   </a>
   <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer">
-    <img no-fancybox style="display: inline;" alt="node" src="https://img.shields.io/badge/node-%3E=10.9.0-green.svg?style=flat-square&logo=Node.js&longCache=true">
+    <img no-fancybox style="display: inline;" alt="node" src="/images/loading.webp" data-original="https://img.shields.io/badge/node-%3E=10.9.0-green.svg?style=flat-square&logo=Node.js&longCache=true">
   </a>
   <a href="https://github.com/79e/hexo-theme-quiet/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
-    <img no-fancybox style="display: inline;" alt="license" src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square&longCache=true">
+    <img no-fancybox style="display: inline;" alt="license" src="/images/loading.webp" data-original="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square&longCache=true">
   </a>
 </div>
 
-<p><img src="Quieter.webp" alt="Quieter"></p>
+<p><img src="/images/loading.webp" data-original="Quieter.webp" alt="Quieter"></p>
 <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>​    🍓一款简洁且功能齐全的 Hexo 主题，在 <a target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a> 主题的基础上所开发。</p>
 <ul>
 <li><p>项目仓库：<a target="_blank" rel="noopener" href="https://github.com/GZ-Metal-Cell/hexo-theme-quieter">GZ-Metal-Cell/hexo-theme-quieter: 🍓 A simple and fully functional Hexo theme, improved based on Hexo theme quiet.</a></p>
@@ -475,7 +477,7 @@
 <figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">---<br>title: 标签<br>date: XXXX-XX-XX XX:XX:XX<br>layout: &quot;tags&quot;<br>comments: true<br><span class="hljs-section">aside: true</span><br><span class="hljs-section">---</span><br></code></pre></td></tr></table></figure>
 <h3 id="友情链接页"><a href="#友情链接页" class="headerlink" title="友情链接页"></a>友情链接页</h3><p>​    在 <code>source/</code> 文件夹下创建文件夹及文件 <code>links/index.md</code>，修改其内容（下面是一个友情链接的范例）：</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">---<br>title: 链接<br>date: XXXX-XX-XX XX:XX:XX<br>type: &quot;links&quot;<br>layout: &quot;links&quot;<br>comments: true<br>aside: true<br><span class="hljs-section">toc: true</span><br><span class="hljs-section">---</span><br><br>&#123;% flink %&#125;<br><span class="hljs-bullet">-</span> class<span class="hljs-emphasis">_name: &#x27;类别 1&#x27;</span><br><span class="hljs-emphasis">  class_</span>desc: &#x27;类别 1 的描述&#x27;<br>  link<span class="hljs-emphasis">_list:</span><br><span class="hljs-emphasis">    - name: &#x27;标题&#x27;</span><br><span class="hljs-emphasis">      link: &#x27;网址&#x27;</span><br><span class="hljs-emphasis">      avatar: &#x27;图标&#x27;</span><br><span class="hljs-emphasis">      descr: &#x27;描述&#x27;</span><br><span class="hljs-emphasis">    - name: &#x27;标题&#x27;</span><br><span class="hljs-emphasis">      link: &#x27;网址&#x27;</span><br><span class="hljs-emphasis">      avatar: &#x27;图标&#x27;</span><br><span class="hljs-emphasis">      descr: &#x27;描述&#x27;</span><br><span class="hljs-emphasis">    - name: &#x27;标题&#x27;</span><br><span class="hljs-emphasis">      link: &#x27;网址&#x27;</span><br><span class="hljs-emphasis">      avatar: &#x27;图标&#x27;</span><br><span class="hljs-emphasis">      descr: &#x27;描述&#x27;</span><br><span class="hljs-emphasis">- class_</span>name: &#x27;类别 2&#x27;<br>  class<span class="hljs-emphasis">_desc: &#x27;类别 2 的描述&#x27;</span><br><span class="hljs-emphasis">  link_</span>list:<br><span class="hljs-bullet">    -</span> name: &#x27;标题&#x27;<br><span class="hljs-code">      link: &#x27;网址&#x27;</span><br><span class="hljs-code">      avatar: &#x27;图标&#x27;</span><br><span class="hljs-code">      descr: &#x27;描述&#x27;</span><br><span class="hljs-code">    - name: &#x27;标题&#x27;</span><br><span class="hljs-code">      link: &#x27;网址&#x27;</span><br><span class="hljs-code">      avatar: &#x27;图标&#x27;</span><br><span class="hljs-code">      descr: &#x27;描述&#x27;</span><br><span class="hljs-code">    - name: &#x27;标题&#x27;</span><br><span class="hljs-code">      link: &#x27;网址&#x27;</span><br><span class="hljs-code">      avatar: &#x27;图标&#x27;</span><br><span class="hljs-code">      descr: &#x27;描述&#x27;</span><br><span class="hljs-code">&#123;% endflink %&#125;</span><br></code></pre></td></tr></table></figure>
-<h3 id="相册页"><a href="#相册页" class="headerlink" title="相册页"></a>相册页</h3><p>​    具体的配置见帮助文档：<a target="_blank" rel="noopener" href="https://hexo-theme-quieter.github.io/2024/11/14/相册配置/">相册配置 | Hexo-Theme-Quiter</a></p>
+<h3 id="相册页"><a href="#相册页" class="headerlink" title="相册页"></a>相册页</h3><p>​    具体的配置见帮助文档：<a target="_blank" rel="noopener" href="https://hexo-theme-quieter.github.io/2024/11/14/Quieter 相册配置/">相册配置 | Hexo-Theme-Quieter</a></p>
 <h3 id="关于页"><a href="#关于页" class="headerlink" title="关于页"></a>关于页</h3><p>​    在 <code>source/</code> 文件夹下创建文件夹及文件 <code>about/index.md</code>，修改其内容（下面是一个关于页的范例）：</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">---<br>title: 关于<br>date: XXXX-XX-XX XX:XX:XX<br>type: &quot;about&quot;<br>layout: &quot;about&quot;<br>comments: true<br><span class="hljs-section">aside: true</span><br><span class="hljs-section">---</span><br><br><span class="hljs-section"># 关于</span><br><br>​	这是一个关于页面的示例！<br></code></pre></td></tr></table></figure>
 <h3 id="404"><a href="#404" class="headerlink" title="404"></a>404</h3><p>​        在 <code>source/</code> 文件夹下创建文件 <code>404.md</code>，修改其内容（下面是一个 404 页的范例）：</p>
@@ -593,7 +595,7 @@
                 </a>
                 <a href="/archives" class="aside-top-about-site-item">
                     <span class="title">归档</span>
-                    <span class="count">4</span>
+                    <span class="count">5</span>
                 </a>
             </div>
             <div class="aside-top-about-contact">
@@ -677,6 +679,12 @@
 	
 	<!-- Analytics -->
 
+    
+        <!-- Busuanzi Analytics -->
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+
 
 	
 
@@ -722,7 +730,20 @@
 		console.log('\n %c Hexo-Quieter 主题 %c https://github.com/GZ-Metal-Cell/hexo-theme-quieter \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
 	</script>
 </footer>
-	</body>
+	
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: true,
+                preloadRatio: 5,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>(r=>{r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,o=r.imageLazyLoadSetting.preloadRatio||1,d=i();function i(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=i());for(var e,n=0;n<d.length;n++)0<=(e=(e=d[n]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*o||document.documentElement.clientHeight*o)&&(()=>{var t,e,a,o,i=d[n];e=function(){d=d.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,o=t.getAttribute("data-original"),a.onload=function(){t.src=o,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=o},t.src!==o&&(a.src=o)))})()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)})(this);</script></body>
 
 	<!-- Hexo-Quieter 主题  https://github.com/GZ-Metal-Cell/hexo-theme-quieter -->
 </html>

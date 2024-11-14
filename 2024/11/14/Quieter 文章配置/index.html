@@ -206,7 +206,7 @@
                 if ("") {
                     links = "".split(',');
                 } else {
-                    links = "/images/random_covers/01.webp,/images/random_covers/02.webp,/images/random_covers/03.webp,/images/random_covers/04.webp,/images/random_covers/05.webp,/images/random_covers/06.webp,/images/random_covers/07.webp".split(',');
+                    links = "/images/random_top_img/01.webp,/images/random_top_img/02.webp,/images/random_top_img/03.webp,/images/random_top_img/04.webp,/images/random_top_img/05.webp,/images/random_top_img/06.webp,/images/random_top_img/07.webp".split(',');
                 }
             
                 var randomLink = links[Math.floor(Math.random() * links.length)];
@@ -256,7 +256,7 @@
 				links = "".split(',');
 			} else
 			{
-				links = "/images/random_covers/01.webp,/images/random_covers/02.webp,/images/random_covers/03.webp,/images/random_covers/04.webp,/images/random_covers/05.webp,/images/random_covers/06.webp,/images/random_covers/07.webp".split(',');
+				links = "/images/random_top_img/01.webp,/images/random_top_img/02.webp,/images/random_top_img/03.webp,/images/random_top_img/04.webp,/images/random_top_img/05.webp,/images/random_top_img/06.webp,/images/random_top_img/07.webp".split(',');
 			}
 			var randomLink = links[Math.floor(Math.random() * links.length)];
 			element.style.backgroundImage = "url('" + randomLink + "')";
@@ -381,6 +381,8 @@
 						
 		
 						
+							<p id="busuanzi_container_page_pv" style='display:none;'>阅读数：<span id="busuanzi_value_page_pv"></span></p>
+						
 					</div>
 				
 			</div>
@@ -431,7 +433,7 @@
 <h2 id="高级参数"><a href="#高级参数" class="headerlink" title="高级参数"></a>高级参数</h2><h3 id="封面外挂-CSS"><a href="#封面外挂-CSS" class="headerlink" title="封面外挂 CSS"></a>封面外挂 CSS</h3><p>​    Quieter 支持自定义封面图片的 CSS，通过 <code>cover_style</code> 参数实现，对于本文封面的超框效果，设定的头部文件如下：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">cover_style:</span> <span class="hljs-string">&quot;height: 131.78%; position: absolute; top: 0; left: 0; transform: translateY(-24.11%);&quot;</span><br></code></pre></td></tr></table></figure>
 <p>​    效果如下：</p>
-<p><img src="01.webp" alt="图片超框"></p>
+<p><img src="/images/loading.webp" data-original="01.webp" alt="图片超框"></p>
 <p>​        当然，这个效果也需要封面图片配合才能做到。</p>
 <h3 id="顶部封面"><a href="#顶部封面" class="headerlink" title="顶部封面"></a>顶部封面</h3><p>​    可以通过 <code>top_img</code> 属性设置文字顶部的封面，值可以为多个，每次打开页面时将从中随机选取一张：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">top_img:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">imgs/01.webp</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">imgs/02.webp</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">imgs/03.webp</span><br></code></pre></td></tr></table></figure>
@@ -523,6 +525,8 @@
 <p>​    为了保证网页的性能，请不要打开文章中未用到的功能！</p>
 <h2 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a>文章加密</h2><p>​    Quieter 对 <a target="_blank" rel="noopener" href="https://github.com/D0n9X1n/hexo-blog-encrypt">hexo-blog-encrypt</a> 加密插件做了适配优化，当文章被加密后，文章主界面将显示上锁标记。同时，解决了文章解密后 js 失效的问题。</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">password:</span> <span class="hljs-string">mikemessi</span><br><span class="hljs-attr">abstract:</span> <span class="hljs-string">Here&#x27;s</span> <span class="hljs-string">something</span> <span class="hljs-string">encrypted,</span> <span class="hljs-string">password</span> <span class="hljs-string">is</span> <span class="hljs-string">required</span> <span class="hljs-string">to</span> <span class="hljs-string">continue</span> <span class="hljs-string">reading.</span><br><span class="hljs-attr">message:</span> <span class="hljs-string">Hey,</span> <span class="hljs-string">password</span> <span class="hljs-string">is</span> <span class="hljs-string">required</span> <span class="hljs-string">here.</span><br><span class="hljs-attr">wrong_pass_message:</span> <span class="hljs-string">Oh,</span> <span class="hljs-string">this</span> <span class="hljs-string">is</span> <span class="hljs-string">an</span> <span class="hljs-string">invalid</span> <span class="hljs-string">password.</span> <span class="hljs-string">Check</span> <span class="hljs-string">and</span> <span class="hljs-string">try</span> <span class="hljs-string">again,</span> <span class="hljs-string">please.</span><br><span class="hljs-attr">wrong_hash_message:</span> <span class="hljs-string">Oh,</span> <span class="hljs-string">these</span> <span class="hljs-string">decrypted</span> <span class="hljs-string">content</span> <span class="hljs-string">cannot</span> <span class="hljs-string">be</span> <span class="hljs-string">verified,</span> <span class="hljs-string">but</span> <span class="hljs-string">you</span> <span class="hljs-string">can</span> <span class="hljs-string">still</span> <span class="hljs-string">have</span> <span class="hljs-string">a</span> <span class="hljs-string">look.</span><br></code></pre></td></tr></table></figure>
+<h2 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h2><p>​    Quieter 主题对 <a target="_blank" rel="noopener" href="https://github.com/netcan/hexo-generator-index-pin-top">hexo-generator-index-pin-top</a> 进行了适配，如果想给某个文章置顶（设置优先级），可以设置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">top:</span> <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 <h2 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h2><p>​    如果评论功能已经配置好，默认文章是打开评论系统的，如果不想要在某个文章中开启评论，可以设置：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">comments:</span> <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 <h2 id="子页面"><a href="#子页面" class="headerlink" title="子页面"></a>子页面</h2><p>​    如果在文章同名的文件夹下放置一个 <code>.md</code> 文件，则 Quieter 可视其为子页面并在面包糠导航栏上体现。</p>
@@ -649,7 +653,7 @@
                 </a>
                 <a href="/archives" class="aside-top-about-site-item">
                     <span class="title">归档</span>
-                    <span class="count">4</span>
+                    <span class="count">5</span>
                 </a>
             </div>
             <div class="aside-top-about-contact">
@@ -747,12 +751,31 @@
                             
                         
                     
+                        
+                        
+                            
+                                
+                            
+                                
+                                    
+                                    
+                                    
+                                        <li class="series-item">
+                                            <a class="series-link" href="/2024/11/14/Quieter 主题配置/">
+                                                <span class="text">Quieter 主题配置</span>
+                                            </a>
+                                        </li>
+                                    
+                                
+                            
+                        
+                    
                 </ol>
                 <div class="aside-top-series-title">
                     <h1>
                         <a href="/tags/帮助文档">标签：帮助文档</a>
                     </h1>
-                    <span id="serial-number">2/3</span>
+                    <span id="serial-number">2/4</span>
                 </div>
             </div>
             <script>
@@ -816,6 +839,12 @@
 	
 	<!-- Analytics -->
 
+    
+        <!-- Busuanzi Analytics -->
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+
 
 	
 
@@ -863,7 +892,20 @@
 		console.log('\n %c Hexo-Quieter 主题 %c https://github.com/GZ-Metal-Cell/hexo-theme-quieter \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
 	</script>
 </footer>
-	</body>
+	
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: true,
+                preloadRatio: 5,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>(r=>{r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,o=r.imageLazyLoadSetting.preloadRatio||1,d=i();function i(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=i());for(var e,n=0;n<d.length;n++)0<=(e=(e=d[n]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*o||document.documentElement.clientHeight*o)&&(()=>{var t,e,a,o,i=d[n];e=function(){d=d.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,o=t.getAttribute("data-original"),a.onload=function(){t.src=o,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=o},t.src!==o&&(a.src=o)))})()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)})(this);</script></body>
 
 	<!-- Hexo-Quieter 主题  https://github.com/GZ-Metal-Cell/hexo-theme-quieter -->
 </html>
